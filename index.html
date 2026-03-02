@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Empty title (kept for browser requirement) -->
+  <title>DE</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+</head>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+   <div class="nav-logo">
+  <img src="images/logo.jpg" alt="Vaibhavi Honagekar Logo" class="logo-img">
+</div>
+    <ul class="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="https://drive.google.com/file/d/1DqyNzquhOXkbYokiOXKFq0maqRGtuaP5/view?usp=drive_link"
+           target="_blank" class="nav-resume">Resume</a>
+      </li>
+    </ul>
+    <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#about">About Me</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <a href="https://drive.google.com/file/d/1DqyNzquhOXkbYokiOXKFq0maqRGtuaP5/view?usp=drive_link"
+     target="_blank" style="color:var(--accent);font-weight:600">View Resume →</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <!-- Left: Text -->
+    <div>
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-dot"></div>
+        Data Engineer
+      </div>
+      <h1 class="hero-name">Vaibhavi<br>Honagekar</h1>
+      <div class="hero-role">Data Engineer · Analytics · Cloud Pipelines</div>
+      <p class="hero-desc">
+        Designing the backbone of modern data systems - from ingestion to insight. 
+        I build scalable ETL/ELT pipelines and cloud data infrastructure that turn fragmented data 
+        into reliable, high-impact business intelligence.
+      </p>
+      <div class="hero-chips">
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag tag-green">Apache Spark</span>
+        <span class="tag tag-green">BigQuery</span>
+        <span class="tag">dbt</span>
+        <span class="tag tag-slate">Airflow</span>
+        <span class="tag tag-slate">Tableau</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- Right: Code-Style Profile Card -->
+    <div class="hero-photo-wrap">
+      <div class="code-profile-card">
+
+        <!-- Title bar -->
+        <div class="code-card-titlebar">
+          <div class="titlebar-dots">
+            <div class="td td-r"></div>
+            <div class="td td-y"></div>
+            <div class="td td-g"></div>
+          </div>
+          <div class="titlebar-name">profile.py</div>
+        </div>
+
+        <!-- Full-width photo strip -->
+        <div class="code-photo-section">
+          <img src="images/photo1.jpeg" alt="Vaibhavi Honagekar"/>
+        </div>
+
+        <!-- Syntax-highlighted code -->
+        <div class="code-lines">
+          <div class="cl"><span class="ln">1</span><span class="cm"># Data Engineer</span></div>
+          <div class="cl"><span class="ln">2</span><span class="kw">class </span><span class="fn">Vaibhavi H.</span><span class="punc">:</span></div>
+          <div class="cl"><span class="ln">3</span><span class="indent"></span><span class="fn">name</span><span class="punc"> = </span><span class="str">"Vaibhavi H."</span></div>
+          <div class="cl"><span class="ln">4</span><span class="indent"></span><span class="fn">role</span><span class="punc"> = </span><span class="str">"Data Engineer"</span></div>
+          <div class="cl"><span class="ln">5</span><span class="indent"></span><span class="fn">focus</span><span class="punc"> = </span><span class="str">"Pipelines &amp; Analytics"</span></div>
+          <div class="cl"><span class="ln">6</span><span class="indent"></span><span class="fn">status</span><span class="punc"> = </span><span class="val">True</span><span class="cm">  # hiring</span></div>
+          <div class="cl"><span class="ln">7</span><span class="indent"></span><span class="fn">coffee</span><span class="punc"> = </span><span class="val">float</span><span class="punc">(</span><span class="str">"inf"</span><span class="punc">)</span></div>
+        </div>
+
+        <!-- Footer caret -->
+        <div class="code-card-footer">
+          <span class="caret">▋</span>
+          <span class="caret-text">open to opportunities</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">2<span>+</span></div>
+        <div class="stat-lbl">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6<span>+</span></div>
+        <div class="stat-lbl">Projects Built</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-lbl">Companies</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">M.S.<span></span></div>
+        <div class="stat-lbl">Information Technology</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════════ -->
+<section class="section sec-white" id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Photo + Resume button -->
+      <div class="reveal">
+        <div class="about-img">
+          <img src="images/photo2.jpeg" alt="Vaibhavi Honagekar"/>
+          
+        </div>
+      </div>
+
+      <!-- Text content -->
+      <div class="reveal reveal-delay-1">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Turning Data into Decisions</h2>
+        <div class="section-divider"></div>
+
+        <div class="about-content" style="margin-top:26px;">
+          <p>
+           I am a Data Engineer passionate about designing resilient, scalable data systems 
+           that transform raw information into strategic insight. 
+           From architecting ELT/ETL pipelines to building cloud-native data warehouses, 
+           I create infrastructure that powers analytics, automation, and AI-driven decision-making.
+
+
+          </p>
+          <p>
+           Across industries — from AI-powered logistics to travel technology — 
+           I’ve built robust pipelines and analytics platforms that 
+           handle real-world complexity at scale, enabling teams to 
+           move faster, operate smarter, and make confident data-driven decisions.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div class="edu-block">
+          <div class="edu-item">
+            <div class="edu-deg">Master of Science — Information Technology</div>
+            <div class="edu-school">Arizona State University</div>
+            <div class="edu-year">August 2023 – May 2025</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-deg">Bachelor of Engineering — Information Technology</div>
+            <div class="edu-school">Mumbai University</div>
+            <div class="edu-year">August 2018 – May 2022</div>
+          </div>
+        </div>
+
+        <!-- 
+        <div class="about-meta">
+          <div class="meta-row">
+            <span class="meta-key">Location</span>
+            <span class="meta-val">United States</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">Email</span>
+            <span class="meta-val">vhonagek@asu.edu</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">LinkedIn</span>
+            <span class="meta-val" style="color:var(--accent2)">linkedin.com/in/vaibhavihonagekar</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">Status</span>
+            <span class="meta-val avail">Open to Opportunities ✓</span>
+          </div>
+        </div>
+Meta info -->
+        <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="#contact" class="btn-primary">Hire Me</a>
+          <a href="https://drive.google.com/file/d/1DqyNzquhOXkbYokiOXKFq0maqRGtuaP5/view?usp=drive_link"
+             target="_blank" class="btn-outline">Download CV ↓</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════════ -->
+<section class="section sec-bg2" id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Technical Expertise</div>
+      <h2 class="section-title">Skills</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">🐍 Languages &amp; Querying</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag tag-slate">R</span>
+          <span class="tag tag-slate">Java</span>
+          <span class="tag tag-slate">Bash</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-cat-title">⚡ Big Data &amp; Processing</div>
+        <div class="skill-tags">
+          <span class="tag tag-green">Apache Spark</span>
+          <span class="tag tag-green">PySpark</span>
+          <span class="tag tag-green">Dataflow Pipelines</span>
+          <span class="tag tag-slate">Hadoop</span>
+          <span class="tag tag-slate">Kafka</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-cat-title">☁️ Cloud &amp; Warehousing</div>
+        <div class="skill-tags">
+          <span class="tag tag-green">BigQuery</span>
+          <span class="tag">AWS (S3, Glue, Redshift)</span>
+          <span class="tag tag-slate">GCP</span>
+          <span class="tag tag-slate">Snowflake</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-title">🔄 ETL / Orchestration</div>
+        <div class="skill-tags">
+          <span class="tag">Airflow</span>
+          <span class="tag">dbt</span>
+          <span class="tag tag-slate">Talend</span>
+          <span class="tag tag-slate">SSIS</span>
+          <span class="tag tag-slate">Informatica</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal reveal-delay-1">
+        <div class="skill-cat-title">📊 BI &amp; Visualization</div>
+        <div class="skill-tags">
+          <span class="tag">Tableau</span>
+          <span class="tag">Power BI</span>
+          <span class="tag tag-slate">Looker</span>
+          <span class="tag tag-slate">Matplotlib</span>
+          <span class="tag tag-slate">Seaborn</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal reveal-delay-2">
+        <div class="skill-cat-title">🔍 Additional Skills</div>
+        <div class="skill-tags">
+          <span class="tag tag-green">Web Scraping</span>
+          <span class="tag tag-green">BeautifulSoup</span>
+          <span class="tag tag-green">Scrapy</span>
+          <span class="tag tag-slate">Machine Learning</span>
+          <span class="tag tag-slate">NLP</span>
+          <span class="tag tag-slate">Docker</span>
+          <span class="tag tag-slate">Git</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════════════ -->
+<section class="section sec-white" id="experience">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Work History</div>
+      <h2 class="section-title">Experience</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline">
+
+      <!-- DriverAI -->
+      <div class="tl-item reveal">
+        <div class="tl-left">
+          <div class="tl-date">2024 — Present</div>
+          <div class="tl-company">DriverAI, LLC</div>
+          <div class="tl-location">United States</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-role">Data Engineer</div>
+          <ul class="tl-bullets">
+            <li>Designed and maintained scalable data pipelines using Python and Apache Spark to ingest and process large volumes of structured and unstructured data from multiple sources.</li>
+            <li>Built and optimized ETL workflows orchestrated via Apache Airflow, reducing pipeline latency and improving data freshness for downstream analytics teams.</li>
+            <li>Implemented data quality checks and monitoring using Great Expectations, ensuring high reliability and consistency across data products.</li>
+            <li>Collaborated with ML engineers to deliver feature pipelines powering AI-based driver analytics models in production.</li>
+            <li>Managed cloud infrastructure on AWS (S3, Glue, Redshift) and automated deployment workflows with CI/CD pipelines.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Python</span>
+            <span class="tag tag-green">Apache Spark</span>
+            <span class="tag">Airflow</span>
+            <span class="tag tag-slate">AWS</span>
+            <span class="tag tag-slate">Redshift</span>
+            <span class="tag tag-slate">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Integrated Travels -->
+      <div class="tl-item reveal">
+        <div class="tl-left">
+          <div class="tl-date">2022 — 2023</div>
+          <div class="tl-company">Integrated Travels</div>
+          <div class="tl-location">United States</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-role">Data Engineer</div>
+          <ul class="tl-bullets">
+            <li>Built automated data ingestion pipelines to consolidate booking, revenue, and customer data from multiple third-party travel APIs into a centralized BigQuery data warehouse.</li>
+            <li>Developed Tableau and Power BI dashboards tracking KPIs such as booking conversion rates, revenue per channel, and customer acquisition costs for executive reporting.</li>
+            <li>Wrote complex SQL queries and dbt models to transform raw data into analytics-ready datasets, improving reporting accuracy and analyst self-serve capability.</li>
+            <li>Applied web scraping techniques using Python (BeautifulSoup, Scrapy) to gather competitive pricing and market trend data for strategic decision-making.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag tag-green">BigQuery</span>
+            <span class="tag">dbt</span>
+            <span class="tag">Tableau</span>
+            <span class="tag tag-slate">Power BI</span>
+            <span class="tag tag-slate">Python</span>
+            <span class="tag tag-slate">Web Scraping</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prisa Infotech -->
+      <div class="tl-item reveal">
+        <div class="tl-left">
+          <div class="tl-date">2020 — 2022</div>
+          <div class="tl-company">Prisa Infotech</div>
+          <div class="tl-location">India</div>
+        </div>
+        <div class="tl-right">
+          <div class="tl-role">Data Engineer</div>
+          <ul class="tl-bullets">
+            <li>Developed and maintained ETL pipelines using Python and SQL to extract, transform, and load data from operational databases into reporting data marts.</li>
+            <li>Designed relational database schemas and optimized slow-running queries, reducing report generation time by up to 50%.</li>
+            <li>Built REST APIs using Flask to expose data services consumed by internal analytics tools and dashboards.</li>
+            <li>Participated in agile development cycles, writing unit tests and documentation to ensure code quality and maintainability.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag tag-slate">Python</span>
+            <span class="tag tag-slate">SQL</span>
+            <span class="tag tag-slate">Flask</span>
+            <span class="tag tag-slate">PostgreSQL</span>
+            <span class="tag tag-slate">ETL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════════ -->
+<section class="section sec-bg2" id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Featured Work</div>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Customer Feedback -->
+      <div class="proj-card pc-blue reveal">
+        <div class="proj-top">
+          <div class="proj-top-pattern" style="background:repeating-linear-gradient(45deg,#1a4a8a,#1a4a8a 2px,transparent 2px,transparent 12px);"></div>
+          <div class="proj-icon">💬</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Customer Feedback Analysis</div>
+          <div class="proj-desc">NLP pipeline that processes and classifies customer feedback at scale using sentiment analysis and topic modelling to surface actionable product insights.</div>
+          <div class="proj-tags">
+            <span class="tag">Python</span>
+            <span class="tag tag-slate">NLP</span>
+            <span class="tag tag-slate">Pandas</span>
+            <span class="tag tag-slate">Scikit-learn</span>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://github.com/vaibhavi2010?tab=repositories" target="_blank" class="proj-link">GitHub →</a>
+          <span style="font-size:0.72rem; color:var(--muted)">2024</span>
+        </div>
+      </div>
+
+      <!-- Mental Health Dashboard -->
+      <div class="proj-card pc-teal reveal reveal-delay-1">
+        <div class="proj-top">
+          <div class="proj-top-pattern" style="background:repeating-linear-gradient(45deg,#1a6e62,#1a6e62 2px,transparent 2px,transparent 12px);"></div>
+          <div class="proj-icon">🧠</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Mental Health Dashboard</div>
+          <div class="proj-desc">Interactive Tableau/Power BI dashboard visualising mental health trends across demographics, built on a cleaned and modelled dataset with dbt transformations.</div>
+          <div class="proj-tags">
+            <span class="tag tag-green">Tableau</span>
+            <span class="tag tag-green">dbt</span>
+            <span class="tag tag-slate">SQL</span>
+            <span class="tag tag-slate">Python</span>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://github.com/vaibhavi2010/Mental-Health-Dashboard" target="_blank" class="proj-link">GitHub →</a>
+          <span style="font-size:0.72rem; color:var(--muted)">2024</span>
+        </div>
+      </div>
+
+      <!-- Student Regression -->
+      <div class="proj-card pc-warm reveal reveal-delay-2">
+        <div class="proj-top">
+          <div class="proj-top-pattern" style="background:repeating-linear-gradient(45deg,#5a3a8a,#5a3a8a 2px,transparent 2px,transparent 12px);"></div>
+          <div class="proj-icon">📈</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Student Dataset — Regression Models</div>
+          <div class="proj-desc">Predictive analytics applying linear, polynomial, and ridge regression models to student performance data to identify key academic success factors.</div>
+          <div class="proj-tags">
+            <span class="tag">Python</span>
+            <span class="tag tag-slate">Scikit-learn</span>
+            <span class="tag tag-slate">Pandas</span>
+            <span class="tag tag-slate">Matplotlib</span>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://github.com/vaibhavi2010/Student-Dataset-Analysis-Using-Regression-Models" target="_blank" class="proj-link">GitHub →</a>
+          <span style="font-size:0.72rem; color:var(--muted)">2023</span>
+        </div>
+      </div>
+
+      <!-- Sports Management -->
+      <div class="proj-card pc-slate reveal">
+        <div class="proj-top">
+          <div class="proj-top-pattern" style="background:repeating-linear-gradient(45deg,#2a4a6a,#2a4a6a 2px,transparent 2px,transparent 12px);"></div>
+          <div class="proj-icon">🏆</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Sports Management System</div>
+          <div class="proj-desc">Full-stack data application for managing sports teams, tournaments, and player statistics with a relational database backend and reporting layer.</div>
+          <div class="proj-tags">
+            <span class="tag tag-slate">Python</span>
+            <span class="tag tag-slate">PostgreSQL</span>
+            <span class="tag tag-slate">Flask</span>
+            <span class="tag tag-slate">SQL</span>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://github.com/vaibhavi2010/Sports-Management-System" target="_blank" class="proj-link">GitHub →</a>
+          <span style="font-size:0.72rem; color:var(--muted)">2023</span>
+        </div>
+      </div>
+
+      <!-- Data Analysis AI Excel -->
+      <div class="proj-card pc-soft reveal reveal-delay-1">
+        <div class="proj-top">
+          <div class="proj-top-pattern" style="background:repeating-linear-gradient(45deg,#1a5a7a,#1a5a7a 2px,transparent 2px,transparent 12px);"></div>
+          <div class="proj-icon">🤖</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">Data Analysis with AI using Excel</div>
+          <div class="proj-desc">Integrated AI-powered insights into Excel workflows using Python automation and OpenAI API to auto-generate summary reports and flag data anomalies.</div>
+          <div class="proj-tags">
+            <span class="tag tag-slate">Python</span>
+            <span class="tag tag-slate">OpenAI API</span>
+            <span class="tag tag-slate">Excel</span>
+            <span class="tag tag-slate">Pandas</span>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://github.com/vaibhavi2010/Data-Analysis-with-AI-using-Excel" target="_blank" class="proj-link">GitHub →</a>
+          <span style="font-size:0.72rem; color:var(--muted)">2023</span>
+        </div>
+      </div>
+
+      <!-- To-Do List -->
+      <div class="proj-card pc-mint reveal reveal-delay-2">
+        <div class="proj-top">
+          <div class="proj-top-pattern" style="background:repeating-linear-gradient(45deg,#1a6e3a,#1a6e3a 2px,transparent 2px,transparent 12px);"></div>
+          <div class="proj-icon">✅</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-name">To-Do List Application</div>
+          <div class="proj-desc">Task management app with a persistent backend database, REST API, and clean UI — demonstrating full-stack data flow from frontend through to database layer.</div>
+          <div class="proj-tags">
+            <span class="tag tag-slate">Python</span>
+            <span class="tag tag-slate">Flask</span>
+            <span class="tag tag-slate">SQLite</span>
+            <span class="tag tag-slate">REST API</span>
+          </div>
+        </div>
+        <div class="proj-footer">
+          <a href="https://github.com/vaibhavi2010?tab=repositories" target="_blank" class="proj-link">GitHub →</a>
+          <span style="font-size:0.72rem; color:var(--muted)">2022</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════ -->
+<section class="section sec-white" id="contact">
+  <div class="container">
+    <div class="section-header reveal" style="text-align:center;">
+      <div class="section-label" style="display:block;">Get In Touch</div>
+      <h2 class="section-title">Contact Me</h2>
+      <div class="section-divider" style="margin:16px auto 0;"></div>
+      <p class="contact-intro">
+        Open to new opportunities, collaborations, and interesting data engineering problems. Let's connect!
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Social Links -->
+      <div class="reveal">
+        <p class="contact-left-desc">
+          Whether you have a role in mind, want to discuss data architecture, or just want to
+          connect — feel free to reach out through any of the channels below.
+        </p>
+        <div class="social-links">
+
+          <a href="https://www.linkedin.com/in/vaibhavihonagekar" target="_blank" class="social-link">
+            <div class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="social-platform">LinkedIn</div>
+              <div class="social-handle">linkedin.com/in/vaibhavihonagekar</div>
+            </div>
+          </a>
+
+          <a href="https://github.com/vaibhavi2010" target="_blank" class="social-link">
+            <div class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+              </svg>
+            </div>
+            <div>
+              <div class="social-platform">GitHub</div>
+              <div class="social-handle">github.com/vaibhavi2010</div>
+            </div>
+          </a>
+
+          <a href="mailto:vhonagek@asu.edu" class="social-link">
+            <div class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="social-platform">Email</div>
+              <div class="social-handle">vhonagek@asu.edu</div>
+            </div>
+          </a>
+
+          <a href="https://drive.google.com/file/d/1DqyNzquhOXkbYokiOXKFq0maqRGtuaP5/view?usp=drive_link"
+             target="_blank" class="social-link">
+            <div class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+              </svg>
+            </div>
+            <div>
+              <div class="social-platform">Resume</div>
+              <div class="social-handle">View on Google Drive</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+<form id="contactForm" class="contact-form reveal reveal-delay-1" onsubmit="handleSubmit(event)">
+
+  <!-- Honeypot (spam trap) -->
+  <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+
+  <div class="form-row">
+    <div class="form-group">
+      <label class="form-label">First Name</label>
+      <input class="form-input" name="first_name" placeholder="Firstname" type="text" required />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Last Name</label>
+      <input class="form-input" name="last_name" placeholder="Lastname" type="text" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Email</label>
+    <input class="form-input" name="email" placeholder="you@company.com" type="email" required />
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Subject</label>
+    <input class="form-input" name="subject" placeholder="Data Engineering Opportunity" />
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Message</label>
+    <textarea class="form-textarea" name="message" placeholder="Tell me about your opportunity..." required></textarea>
+  </div>
+
+  <button type="submit" id="submitBtn" class="btn-primary">Send Message</button>
+
+  <!-- Status message -->
+  <p id="formStatus" style="margin-top:12px;"></p>
+</form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════ -->
+<div class="footer-wrap">
+  <footer>
+    <p>© 2026 <span>Vaibhavi Honagekar</span> · Data Engineer</p>
+    <p>
+      vhonagek@asu.edu &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/vaibhavihonagekar" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+</div>
+
+<!-- JavaScript -->
+<script src="main.js"></script>
+
+</body>
+</html>
